@@ -1,6 +1,6 @@
 # BeatdApp Coding Challenge
 
-This is a coding challenge BeatdApp has asked me to perform. 
+This is a coding challenge BeatdApp has asked me to create during the interview process. 
 
 Requirements:
  - End users must be able to record expenses by entering in the:
