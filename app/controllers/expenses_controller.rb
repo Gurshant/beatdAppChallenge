@@ -1,5 +1,5 @@
 class ExpensesController < ApplicationController
-  before_action :set_expense, only: [:show, :edit, :update, :destroy]
+  before_action :set_expense, only: [ :edit, :update, :destroy]
 
   # GET /expenses
   # GET /expenses.json
@@ -7,9 +7,6 @@ class ExpensesController < ApplicationController
     @expenses = Expense.all
   end
 
-  # GET /expenses/1
-  def show
-  end
 
   # GET /expenses/new
   def new
@@ -60,6 +57,6 @@ class ExpensesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def expense_params
-      params.require(:expense).permit(:name, :cost, :quantity)
+      params.require(:expense).permit(:name, :cost, :quantity, :category_id)
     end
 end

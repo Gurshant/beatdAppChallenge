@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Category.delete_all;
+Expense.delete_all;
+
+categories=["Books","Movies","Electronics","Home/Appliances", "Grocery", "Health", "Necessities", "Other"];
+
+
+for category in categories
+  Category.create(name:category)
+end
+
+puts Category.count
+
+
