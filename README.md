@@ -11,9 +11,9 @@ Requirements:
  - End users must be able to view a list of all of their expenses
  - Create a `README.md` file that a developer can follow to run your project locally
  
- You can use the app by visiting https://beatdapp-challenge.herokuapp.com/ or by installing it on your local device.
+ You can use the app by visiting https://beatdapp-challenge.herokuapp.com/ or by installing it on your local device(the steps are below).
  
- I have created a sample user with sample data you may use: (email: abc@gmail.com password: 123456789) or you may create your own. 
+ I have created a user with sample data you may use: (email: abc@gmail.com password: 123456789) or you can create your own. 
 
 ## Installation
 1. Clone the repo to your machine 
