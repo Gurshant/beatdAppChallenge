@@ -16,7 +16,24 @@ categories=["Books","Movies","Electronics","Home/Appliances", "Grocery", "Health
 for category in categories
   Category.create(name:category)
 end
+u = User.create(email: 'abc@gmail.com', password:"123456789")
+
+names=["hammer", "drill", "Laptop", "Headphones", "Book", "Movie Tickets", "Candle", "Coffee"]
+for name in names
+
+  e= Expense.create(
+    name: name, 
+    cost: rand(100),
+    quantity: rand(100),
+    user_id: u.id,
+    category_id: Category.order(Arel.sql('RANDOM()')).first.id
+  )
+end
+
 
 puts Category.count
+puts User.count
+puts Expense.count
+
 
 
