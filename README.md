@@ -22,13 +22,13 @@ Requirements:
 2. Make sure ruby version: 2.6.3 and rails version: 6.0.0 is installed
 
 3. Start the Rails App
-    2. Install all dependencies
+    1. Install all dependencies
         * ``` bundle install```
-    3. Migrate database
+    2. Migrate database
         * ```rails db:create ```
         * ```rails db:migrate ```
         * ```rails db:seed ```
-    4. Start the server
+    3. Start the server
          * ```rails s```
         
 Note: The server is running on http://localhost:3000
