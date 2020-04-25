@@ -42,21 +42,24 @@ class ExpensesController < ApplicationController
 
   # PATCH/PUT /expenses/1
   def update
-    
-    respond_to do |format|
-      if @expense.update(expense_params)
-        format.html { redirect_to expenses_path, notice: 'Expense was successfully updated.' }
-      else
-        format.html { render :edit }
+    if current_user.id==@expense.user_id
+      respond_to do |format|
+        if @expense.update(expense_params)
+          format.html { redirect_to expenses_path, notice: 'Expense was successfully updated.' }
+        else
+          format.html { render :edit }
+        end
       end
     end
   end
 
   # DELETE /expenses/1
   def destroy
-    @expense.destroy
-    respond_to do |format|
-      format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
+    if current_user.id==@expense.user_id
+      @expense.destroy
+      respond_to do |format|
+        format.html { redirect_to expenses_url, notice: 'Expense was successfully destroyed.' }
+      end
     end
   end
 
